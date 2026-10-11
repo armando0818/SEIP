@@ -1,0 +1,274 @@
+/*
+Theme Name: SEIP Institucional
+Theme URI: https://example.com/
+Author: SEIP
+Description: Plantilla WordPress educativa SEIP con diseño SEIP Institucional.
+Version: 1.1
+Text Domain: seip-dashboard
+*/
+
+:root{
+  --navy:#123f63;
+  --navy-2:#0b3150;
+  --blue:#176f9f;
+  --turquoise:#18a7a1;
+  --green:#4fc6b7;
+  --yellow:#ffd65a;
+  --bg:#f3f8fb;
+  --white:#fff;
+  --text:#123b60;
+  --muted:#607d98;
+  --line:#dce8ef;
+  --shadow:0 10px 28px rgba(18,63,99,.08);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+
+.seip-shell{min-height:100vh;display:flex}
+.seip-sidebar{
+  position:fixed;left:0;top:0;bottom:0;width:278px;
+  background:linear-gradient(180deg,var(--navy),#0b3859);
+  color:#fff;padding:24px 12px;z-index:30;
+  display:flex;flex-direction:column;
+}
+.seip-brand{
+  display:flex;align-items:center;gap:12px;padding:8px 18px 24px;
+}
+.seip-logo-image{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;overflow:hidden;border-radius:15px}
+.seip-logo-image .custom-logo-link{display:block;width:100%;height:100%}
+.seip-logo-image img{width:100%;height:100%;object-fit:contain;border-radius:15px}
+.seip-logo-mark{
+  width:54px;height:54px;border-radius:15px;
+  background:linear-gradient(135deg,#20b6b0,#0b7897);
+  display:grid;place-items:center;font-size:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.seip-brand strong{font-size:28px;letter-spacing:.5px}
+.seip-brand small{display:block;font-size:11px;opacity:.85;margin-top:2px}
+.seip-nav{display:flex;flex-direction:column;gap:7px}
+.seip-nav a{
+  display:flex;align-items:center;gap:14px;
+  padding:13px 16px;border-radius:11px;
+  color:#e9f5fb;font-size:15px;transition:.2s;
+}
+.seip-nav a:hover,.seip-nav a.active{
+  background:linear-gradient(90deg,#1a86b6,#1679a1);
+  box-shadow:0 7px 18px rgba(0,0,0,.12);
+}
+.seip-nav .icon{width:25px;text-align:center;font-size:20px}
+.seip-side-quote{
+  margin-top:auto;padding:24px 22px 14px;
+  font-weight:700;font-style:italic;font-size:17px;line-height:1.45;
+}
+.seip-side-quote span{
+  display:block;width:62px;height:5px;background:var(--yellow);
+  border-radius:8px;margin-top:16px;
+}
+
+.seip-main{margin-left:278px;width:calc(100% - 278px)}
+.seip-topbar{
+  height:88px;background:var(--navy-2);color:#fff;
+  display:flex;align-items:center;gap:25px;padding:0 34px;
+}
+.seip-search-form{max-width:655px;flex:1;min-width:0}
+.seip-search{
+  width:100%;background:#174e73;border:1px solid #3c6f8e;
+  border-radius:18px;padding:13px 18px;color:#fff;outline:none;
+}
+.seip-search::placeholder{color:#d5e6ef}
+.seip-top-actions{margin-left:auto;display:flex;align-items:center;gap:18px}
+.seip-bell{font-size:24px}
+.seip-user{
+  border-left:1px solid rgba(255,255,255,.2);
+  padding-left:18px;display:flex;align-items:center;gap:11px;
+}
+.seip-avatar{
+  width:44px;height:44px;border-radius:50%;background:#f7fbfd;
+  color:var(--navy);display:grid;place-items:center;font-size:20px;
+}
+.seip-user strong{font-size:14px}.seip-user small{display:block;opacity:.75;margin-top:2px}
+
+.seip-content{padding:25px 22px}
+.seip-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:20px}
+.seip-card{
+  background:var(--white);border:1px solid #e1ebf1;
+  border-radius:12px;box-shadow:var(--shadow);
+}
+.seip-hero{
+  min-height:312px;overflow:hidden;position:relative;
+  padding:28px 30px;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 88% 25%,rgba(76,200,190,.25),transparent 24%),
+    radial-gradient(circle at 75% 90%,rgba(255,214,90,.45),transparent 27%),
+    linear-gradient(135deg,#fff 0%,#f7fbfd 58%,#e9f8f7 100%);
+}
+.seip-hero h1{font-size:58px;line-height:1;margin:0 0 8px;color:#0b3c62}
+.seip-kicker{letter-spacing:5px;font-size:12px;color:#567693;font-weight:700}
+.seip-hero h2{font-size:25px;line-height:1.15;margin:0 0 12px;max-width:500px}
+.seip-hero h2 span{color:var(--turquoise)}
+.seip-hero p{max-width:520px;color:#456987;line-height:1.55;margin:0 0 18px}
+.seip-btn{
+  display:inline-flex;align-items:center;gap:14px;
+  background:linear-gradient(90deg,#159eaa,#168ca4);
+  color:#fff;padding:11px 25px;border-radius:25px;font-weight:700;
+  box-shadow:0 8px 17px rgba(23,111,159,.2);
+}
+.seip-hero-features{
+  margin-left:auto;display:grid;grid-template-columns:repeat(2,125px);gap:22px;
+  max-width:290px;
+}
+.seip-feature{text-align:center}
+.seip-feature .round{
+  width:55px;height:55px;border-radius:50%;margin:0 auto 8px;
+  display:grid;place-items:center;background:#e5f5f7;font-size:23px;color:#12678b;
+}
+.seip-feature b{display:block;font-size:14px}.seip-feature small{color:#456987}
+
+.seip-shortcuts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.seip-shortcut{padding:18px;min-height:220px}
+.seip-shortcut .round{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#e6f5f8;font-size:21px;margin-bottom:14px}
+.seip-shortcut h3{margin:0 0 10px;font-size:20px}
+.seip-shortcut p{color:var(--muted);line-height:1.5;font-size:14px}
+.seip-arrow{
+  width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+  background:#178da8;color:#fff;margin-top:15px;
+}
+
+.seip-projects{margin-top:18px;padding:20px}
+.seip-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.seip-section-head h2{font-size:19px;margin:0}
+.seip-link{color:#1686a5;font-size:13px;font-weight:700}
+.seip-project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.seip-project{border:1px solid var(--line);border-radius:9px;padding:14px;min-height:190px}
+.seip-tag{display:inline-block;border-radius:6px;padding:5px 10px;font-size:11px;font-weight:700;background:#d7f7ee;color:#08786e}
+.seip-tag.yellow{background:#fff0bd;color:#846000}
+.seip-project h3{font-size:15px;line-height:1.3;margin:12px 0 8px}
+.seip-project p{font-size:12px;color:var(--muted);line-height:1.5}
+.seip-project footer{display:flex;justify-content:space-between;align-items:center;margin-top:15px;color:#7891a5;font-size:11px}
+
+.seip-right{display:flex;flex-direction:column;gap:16px}
+.seip-side-card{padding:17px}
+.seip-welcome{border-left:6px solid var(--yellow)}
+.seip-welcome h2{margin:0 0 8px;font-size:19px}
+.seip-welcome p{color:#52708c;font-size:13px}
+.seip-tip{background:#e3f5fb;border-radius:9px;padding:12px;color:#174c72;font-size:13px;font-weight:600}
+.seip-stats{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.seip-stat{padding:13px 9px;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.seip-stat:nth-last-child(-n+2){border-bottom:0}
+.seip-stat-icon{width:40px;height:40px;border-radius:50%;background:#e8f6f8;display:grid;place-items:center}
+.seip-stat strong{font-size:20px;display:block}.seip-stat small{font-size:10px;color:var(--muted)}
+.seip-events .event{display:grid;grid-template-columns:54px 1fr 15px;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.seip-events .event:last-child{border:0}
+.seip-date{background:#e7f5fa;border-radius:8px;text-align:center;padding:7px}
+.seip-date b{font-size:18px;display:block}.seip-date small{font-size:9px}
+.seip-event-title{font-weight:700;font-size:12px}.seip-event-meta{font-size:10px;color:var(--muted);margin-top:5px}
+.seip-innovation{
+  padding:18px;background:linear-gradient(110deg,#ffd965,#ffdf7b);
+  min-height:95px;display:flex;align-items:center;justify-content:space-between;
+  color:#184365;font-weight:800;border-radius:9px;
+}
+.seip-innovation span{font-size:34px}
+
+.seip-mobile-toggle{display:none}
+@media(max-width:1050px){
+  .seip-sidebar{width:235px}.seip-main{margin-left:235px;width:calc(100% - 235px)}
+  .seip-grid{grid-template-columns:1fr}.seip-right{display:grid;grid-template-columns:repeat(2,1fr)}
+  .seip-hero-features{display:none}
+}
+@media(max-width:760px){
+  .seip-sidebar{transform:translateX(-100%);transition:.25s;width:270px}
+  body.menu-open .seip-sidebar{transform:translateX(0)}
+  .seip-main{margin-left:0;width:100%}
+  .seip-topbar{height:auto;min-height:72px;padding:12px 15px}
+  .seip-mobile-toggle{display:block;background:none;border:0;color:#fff;font-size:25px}
+  .seip-search-form{max-width:655px;flex:1;min-width:0}
+.seip-search{display:none}
+  .seip-user div:not(.seip-avatar){display:none}
+  .seip-content{padding:14px}
+  .seip-hero{padding:23px;min-height:330px}.seip-hero h1{font-size:46px}
+  .seip-shortcuts,.seip-project-grid,.seip-right{grid-template-columns:1fr}
+  .seip-side-card{min-height:auto}
+}
+
+/* Refined SEIP presentation */
+.seip-slogan{animation:seip-slogan-in .85s cubic-bezier(.2,.7,.2,1) both;}
+.seip-slogan span{display:inline-block;animation:seip-accent-in .7s .22s ease-out both;}
+@keyframes seip-slogan-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes seip-accent-in{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.seip-slogan,.seip-slogan span{animation:none}}
+.seip-hero{border:1px solid #e1edf2;border-radius:18px;background:radial-gradient(circle at 85% 18%,rgba(24,167,161,.13),transparent 32%),linear-gradient(135deg,#fff,#f2fafb);}
+.seip-hero-copy{max-width:560px}.seip-hero h1{font-size:clamp(46px,5vw,66px);letter-spacing:-2px}.seip-slogan{font-size:clamp(26px,3vw,36px);line-height:1.15;letter-spacing:-.7px;max-width:540px}.seip-kicker{letter-spacing:3px;font-size:10px}
+.seip-shortcut{display:block;color:inherit;transition:transform .2s ease,box-shadow .2s ease}.seip-shortcut:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(18,63,99,.13)}
+.seip-project-image{display:block;margin:-14px -14px 14px;overflow:hidden;border-radius:9px 9px 0 0}.seip-project-image img{display:block;width:100%;height:135px;object-fit:cover}.seip-project h3 a{color:inherit}.seip-project h3 a:hover,.seip-link:hover{color:#0b7897}.seip-project footer a{color:#1686a5;font-size:20px}.seip-empty{grid-column:1/-1;padding:18px;color:var(--muted);line-height:1.6}.seip-events .event{color:inherit;text-decoration:none}.seip-events .event:hover .seip-event-title{color:#1686a5}
+.seip-welcome{padding:22px}.seip-welcome h2{line-height:1.25}.seip-stats{grid-template-columns:1fr 1fr}.seip-stat{align-items:center}
+/* Opción 3: Institucional */
+.seip-sidebar{width:270px;padding:22px 12px}.seip-main{margin-left:270px;width:calc(100% - 270px)}
+.seip-brand{padding-bottom:26px}.seip-brand strong{font-size:26px}.seip-nav a{border-radius:8px;padding:14px 16px}.seip-nav a:hover,.seip-nav a.active{box-shadow:none}
+.seip-topbar{height:84px;padding:0 30px}.seip-search{border-radius:10px}.seip-content{padding:24px}
+.seip-card{border-radius:12px;box-shadow:0 5px 18px rgba(18,63,99,.055);border-color:#dce8ef}
+.seip-hero{min-height:320px;padding:34px 32px;border-top:5px solid var(--turquoise);background:linear-gradient(135deg,#fff 0%,#f7fbfd 72%,#e9f8f7 100%)}
+.seip-kicker{font-size:10px;letter-spacing:3.5px}.seip-hero h1{font-size:60px;line-height:.98}.seip-slogan{font-size:33px;line-height:1.17;letter-spacing:-.5px}
+.seip-btn{border-radius:8px;padding:12px 21px;box-shadow:none}.seip-shortcuts{gap:13px}.seip-shortcut{min-height:205px;border-top:3px solid var(--turquoise);padding:19px}.seip-shortcut .round{border-radius:10px}
+.seip-projects{padding:22px}.seip-section-head{align-items:flex-end;padding-bottom:13px;border-bottom:1px solid var(--line)}.seip-project-grid{gap:12px}.seip-project{border-radius:8px;padding:15px;min-height:205px}.seip-tag{border-radius:4px;text-transform:uppercase;letter-spacing:.4px}
+.seip-side-card{padding:19px}.seip-welcome{border-left:5px solid var(--yellow);border-radius:10px}.seip-stats{gap:0}.seip-stat{padding:14px 9px}.seip-stat-icon{border-radius:10px}.seip-events .event{padding:13px 0}.seip-date{border-radius:5px}
+@media(max-width:1050px){.seip-sidebar{width:235px}.seip-main{margin-left:235px;width:calc(100% - 235px)}}
+@media(max-width:760px){.seip-sidebar{width:270px}.seip-content{padding:14px}.seip-hero{padding:23px}}
+/* SEIP Institucional Pro: más profundidad y acentos cálidos, misma paleta */
+.seip-brand{position:relative}.seip-brand:after{content:"";position:absolute;left:17px;bottom:13px;width:42px;height:3px;border-radius:4px;background:var(--yellow)}
+.seip-logo-mark,.seip-logo-image{box-shadow:0 8px 22px rgba(0,0,0,.18);outline:3px solid rgba(255,214,90,.22)}
+.seip-nav a{position:relative;transition:background .2s ease,transform .2s ease}.seip-nav a:hover{transform:translateX(3px)}.seip-nav a.active:before{content:"";position:absolute;left:-1px;top:10px;bottom:10px;width:4px;border-radius:4px;background:var(--yellow)}
+.seip-topbar{position:relative;border-bottom:3px solid var(--yellow);box-shadow:0 5px 18px rgba(11,49,80,.12)}.seip-search{box-shadow:inset 0 1px rgba(255,255,255,.08)}
+.seip-hero{position:relative;overflow:hidden;isolation:isolate;min-height:342px;padding:34px 32px;background:radial-gradient(ellipse at 80% 12%,rgba(24,167,161,.12),transparent 33%),radial-gradient(ellipse at 72% 100%,rgba(255,214,90,.24),transparent 34%),linear-gradient(120deg,#fff 0%,#f7fbfd 60%,#e9f8f7 100%);border:1px solid #d5e5eb;border-top:5px solid var(--turquoise);box-shadow:0 14px 34px rgba(18,63,99,.09)}
+.seip-hero:before{content:"";position:absolute;z-index:-1;right:-38px;top:-82px;width:260px;height:260px;border:1px solid rgba(24,167,161,.19);border-radius:50%;box-shadow:0 0 0 17px rgba(24,167,161,.035),0 0 0 38px rgba(24,167,161,.025)}
+.seip-hero:after{content:"";position:absolute;z-index:-1;right:34%;bottom:27px;width:66px;height:7px;border-radius:6px;background:var(--yellow);transform:rotate(-35deg);box-shadow:22px -16px 0 -2px rgba(255,214,90,.6)}
+.seip-hero-copy{position:relative;z-index:1}.seip-hero h1{font-size:clamp(54px,5vw,68px);letter-spacing:-2.8px;text-shadow:0 2px 0 rgba(255,255,255,.8)}.seip-slogan{font-size:clamp(29px,3vw,37px);line-height:1.13;letter-spacing:-.8px}.seip-slogan span{background:linear-gradient(transparent 74%,rgba(255,214,90,.55) 74%);padding-bottom:3px}
+.seip-hero-features{position:relative;z-index:1;gap:10px;max-width:284px}.seip-feature{padding:9px 6px 10px;background:rgba(255,255,255,.82);border:1px solid rgba(220,232,239,.9);border-radius:12px;box-shadow:0 8px 20px rgba(18,63,99,.045);transition:transform .22s ease,border-color .22s ease}.seip-feature:nth-child(even){transform:translateY(10px)}.seip-feature:hover{transform:translateY(-3px);border-color:var(--yellow)}.seip-feature:nth-child(even):hover{transform:translateY(6px)}.seip-feature .round{background:linear-gradient(145deg,#fff0bd,#e5f5f7);border:1px solid rgba(255,214,90,.55)}
+.seip-btn{position:relative;z-index:1;border-radius:8px;padding:13px 23px;box-shadow:0 8px 18px rgba(23,111,159,.18);transition:transform .2s ease,box-shadow .2s ease}.seip-btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(23,111,159,.25)}
+.seip-shortcut{position:relative;overflow:hidden;min-height:212px;background:linear-gradient(145deg,#fff 72%,#f4fafb);box-shadow:0 8px 23px rgba(18,63,99,.045)}.seip-shortcut:after{content:"";position:absolute;right:-26px;bottom:-42px;width:100px;height:100px;border:1px solid rgba(24,167,161,.16);border-radius:50%;box-shadow:0 0 0 13px rgba(24,167,161,.035)}.seip-shortcut:nth-child(2):after{border-color:rgba(255,214,90,.55);box-shadow:0 0 0 13px rgba(255,214,90,.09)}.seip-shortcut .round{position:relative;z-index:1;background:linear-gradient(145deg,#fff0bd,#e5f5f7);border:1px solid rgba(255,214,90,.38)}.seip-shortcut:hover{transform:translateY(-5px);box-shadow:0 16px 30px rgba(18,63,99,.12)}
+.seip-projects{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff,#fbfdfe);box-shadow:0 10px 26px rgba(18,63,99,.06)}.seip-projects:before{content:"";position:absolute;top:0;left:22px;width:70px;height:4px;background:var(--yellow);border-radius:0 0 4px 4px}.seip-section-head{position:relative}.seip-project{position:relative;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(18,63,99,.04);transition:transform .2s ease,box-shadow .2s ease}.seip-project:nth-child(2){border-top:3px solid var(--yellow)}.seip-project:hover{transform:translateY(-4px);box-shadow:0 13px 24px rgba(18,63,99,.1)}.seip-tag{background:#fff0bd;color:#846000}.seip-project-image img{transition:transform .35s ease}.seip-project:hover .seip-project-image img{transform:scale(1.04)}
+.seip-welcome{background:radial-gradient(circle at 95% 0%,rgba(255,214,90,.2),transparent 40%),linear-gradient(135deg,#fff,#f7fbfd);box-shadow:0 10px 26px rgba(18,63,99,.07)}.seip-tip{border:1px solid rgba(24,167,161,.12);border-radius:7px}.seip-stat{position:relative}.seip-stat-icon{background:linear-gradient(145deg,#fff0bd,#e5f5f7);border:1px solid rgba(255,214,90,.35)}.seip-stat strong{color:var(--navy)}
+.seip-events .event{position:relative}.seip-events .event:before{content:"";position:absolute;left:26px;top:42px;bottom:-12px;width:1px;background:var(--line)}.seip-events .event:last-child:before{display:none}.seip-date{position:relative;z-index:1;background:linear-gradient(145deg,#fff0bd,#e7f5fa);border:1px solid rgba(255,214,90,.38)}
+.seip-innovation{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 12px 25px rgba(18,63,99,.1)}.seip-innovation:after{content:"";position:absolute;right:35px;top:-24px;width:115px;height:115px;border:1px solid rgba(18,63,99,.13);border-radius:50%;box-shadow:0 0 0 13px rgba(18,63,99,.035)}.seip-innovation>div,.seip-innovation>b{position:relative;z-index:1}
+@media(max-width:1050px){.seip-hero-features{display:grid}.seip-hero{min-height:320px}}
+@media(max-width:760px){.seip-hero-features{display:none}.seip-hero:before{right:-100px}.seip-hero:after{right:8%}.seip-hero{min-height:350px}.seip-shortcut{min-height:175px}}
+@media(prefers-reduced-motion:reduce){.seip-nav a,.seip-feature,.seip-shortcut,.seip-project,.seip-btn,.seip-project-image img{transition:none}}
+/* Presentación limpia con lema animado */
+.seip-content{padding-top:20px}
+.seip-marquee{height:48px;margin:0 0 18px;overflow:hidden;display:flex;align-items:center;background:#fff0bd;border-left:5px solid var(--yellow);border-radius:8px;color:var(--navy);box-shadow:0 4px 12px rgba(18,63,99,.05)}
+.seip-marquee-track{display:flex;width:max-content;animation:seip-marquee-scroll 28s linear infinite;will-change:transform}
+.seip-marquee-group{display:flex;flex:0 0 auto;align-items:center;gap:34px;padding-right:34px;white-space:nowrap;font-size:14px;font-weight:700;letter-spacing:.2px}
+.seip-marquee-group b{font-size:16px;color:var(--turquoise)}
+.seip-marquee:hover .seip-marquee-track{animation-play-state:paused}
+@keyframes seip-marquee-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.seip-brand:after{display:none}.seip-nav a:hover{transform:none}.seip-nav a.active:before{left:0}
+.seip-topbar{border-bottom:2px solid var(--yellow);box-shadow:0 3px 12px rgba(11,49,80,.09)}
+.seip-hero{min-height:320px;padding:30px;border-radius:12px;border-top:4px solid var(--turquoise);background:linear-gradient(120deg,#fff 0%,#f7fbfd 68%,#e9f8f7 100%);box-shadow:0 8px 22px rgba(18,63,99,.06)}
+.seip-hero:before,.seip-hero:after{display:none}.seip-hero-copy,.seip-hero-features{position:relative;z-index:1}.seip-hero h1{font-size:60px;letter-spacing:-2px;text-shadow:none}.seip-slogan{font-size:32px;line-height:1.16;letter-spacing:-.5px}.seip-slogan span{background:linear-gradient(transparent 78%,rgba(255,214,90,.55) 78%)}
+.seip-hero-features{gap:12px;max-width:280px}.seip-feature,.seip-feature:nth-child(even){transform:none;padding:7px 4px;background:transparent;border:0;border-radius:0;box-shadow:none}.seip-feature:hover,.seip-feature:nth-child(even):hover{transform:none}.seip-feature .round{width:48px;height:48px;margin-bottom:7px;background:#e5f5f7;border:1px solid #dce8ef;box-shadow:none}
+.seip-btn{border-radius:8px;padding:12px 21px;box-shadow:0 5px 12px rgba(23,111,159,.14)}
+.seip-shortcuts{gap:14px}.seip-shortcut,.seip-shortcut:nth-child(2){min-height:190px;border-top:3px solid var(--turquoise);border-radius:10px;padding:17px;background:#fff;box-shadow:0 5px 16px rgba(18,63,99,.045)}.seip-shortcut:nth-child(2){border-top-color:var(--yellow)}.seip-shortcut:after{display:none}.seip-shortcut .round{width:43px;height:43px;border-radius:9px;background:#e5f5f7;border:0}.seip-shortcut:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(18,63,99,.09)}
+.seip-projects{padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(18,63,99,.05)}.seip-projects:before{left:20px;width:48px;height:3px}.seip-section-head{padding-bottom:10px}.seip-project-grid{gap:10px}.seip-project,.seip-project:nth-child(2){min-height:190px;padding:13px;border:1px solid var(--line);border-radius:8px;box-shadow:none}.seip-project:nth-child(2){border-top:3px solid var(--yellow)}.seip-project:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(18,63,99,.08)}.seip-tag{background:#fff0bd;color:#765700}.seip-project-image{margin:-13px -13px 12px}
+.seip-welcome{background:#fff;border-left:4px solid var(--yellow);box-shadow:0 6px 18px rgba(18,63,99,.05)}.seip-welcome .seip-tip{background:#e3f5fb}.seip-stat-icon{background:#e5f5f7;border:0}.seip-events .event:before{display:none}.seip-date{background:#e7f5fa;border:0}.seip-events .event{padding:11px 0;border-bottom:1px solid var(--line)}.seip-events .event:last-child{border-bottom:0}.seip-innovation{box-shadow:none;border-radius:9px}.seip-innovation:after{display:none}
+@media(max-width:1050px){.seip-marquee{margin-bottom:14px}.seip-hero-features{display:none}}
+@media(max-width:760px){.seip-content{padding:14px}.seip-marquee{height:42px}.seip-marquee-group{font-size:12px;gap:22px;padding-right:22px}.seip-hero{min-height:310px;padding:23px}.seip-hero h1{font-size:48px}.seip-slogan{font-size:28px}.seip-shortcut,.seip-shortcut:nth-child(2){min-height:160px}}
+@media(prefers-reduced-motion:reduce){.seip-marquee-track{animation:none;transform:none}.seip-marquee{justify-content:center}.seip-marquee-group[aria-hidden="true"]{display:none}}
+/* SEIP destacado: comunidad, contenido y navegación */
+.seip-nav{gap:5px}.seip-nav a{min-height:43px;padding:10px 14px;font-size:14px}.seip-nav .icon{width:26px;color:#ffd65a;font-size:19px}
+.seip-hero{min-height:335px;background:radial-gradient(circle at 91% 12%,rgba(255,214,90,.22),transparent 21%),radial-gradient(circle at 80% 90%,rgba(24,167,161,.12),transparent 33%),linear-gradient(120deg,#fff 0%,#f7fbfd 65%,#e9f8f7 100%)}
+.seip-hero:before{display:block;content:"";position:absolute;z-index:0;right:-72px;top:-118px;width:275px;height:275px;border:1px solid rgba(24,167,161,.14);border-radius:50%;box-shadow:0 0 0 18px rgba(24,167,161,.025)}.seip-hero:after{display:block;content:"";position:absolute;z-index:0;right:34%;bottom:22px;width:50px;height:5px;border-radius:5px;background:var(--yellow);transform:rotate(-35deg)}
+.seip-hero h1{font-size:clamp(58px,5vw,72px);letter-spacing:-3px}.seip-slogan{font-size:clamp(30px,3vw,38px)}
+.seip-hero-features{gap:12px;max-width:285px}.seip-feature,.seip-feature:nth-child(even){transform:none;padding:9px 5px 10px;background:rgba(255,255,255,.85);border:1px solid rgba(220,232,239,.95);border-radius:12px;box-shadow:0 6px 18px rgba(18,63,99,.05)}.seip-feature:hover,.seip-feature:nth-child(even):hover{transform:translateY(-3px);border-color:var(--yellow)}.seip-feature .round{width:48px;height:48px;background:linear-gradient(145deg,#fff0bd,#e5f5f7);border:1px solid rgba(255,214,90,.45)}
+.seip-about{position:relative;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(250px,.8fr);gap:34px;align-items:center;margin-top:22px;padding:30px 32px;overflow:hidden;border-left:5px solid var(--yellow);background:radial-gradient(circle at 92% 8%,rgba(255,214,90,.2),transparent 28%),linear-gradient(120deg,#fff,#f3f8fb);box-shadow:0 10px 28px rgba(18,63,99,.07)}
+.seip-about-copy{position:relative;z-index:1}.seip-about-copy h2{margin:9px 0 14px;font-size:clamp(25px,3vw,34px);line-height:1.15;letter-spacing:-.5px}.seip-about-copy h2 span{color:var(--turquoise);background:linear-gradient(transparent 78%,rgba(255,214,90,.55) 78%)}.seip-about-copy p{margin:0;color:#456987;font-size:14px;line-height:1.75}
+.seip-about-points{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}.seip-about-point{display:flex;align-items:center;gap:12px;padding:12px 13px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.9)}.seip-about-point>span{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px;border-radius:10px;background:#fff0bd;color:#765700;font-size:12px;font-weight:800}.seip-about-point strong{display:block;color:var(--navy);font-size:13px}.seip-about-point small{display:block;margin-top:3px;color:var(--muted);font-size:11px;line-height:1.35}
+@media(max-width:850px){.seip-about{grid-template-columns:1fr;gap:18px}.seip-about-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.seip-about-point{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.seip-about{padding:22px 18px}.seip-about-points{grid-template-columns:1fr}.seip-about-point{flex-direction:row;align-items:center}.seip-hero:before{right:-130px}.seip-hero:after{right:10%}}
